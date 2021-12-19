@@ -47,51 +47,6 @@ function validar(e) {
 
     return patron.test(te)
 }
-function btnLng() {
-
-    return //We only use one language
-
-    lng_select = document.getElementById('lng_select');
-    mobile = document.getElementById('mobile');
-    pincode = document.getElementById('pin');
-
-    textloading = document.getElementById('textloading');
-    textloadingPin = document.getElementById('text-loading-pin');
-
-    mobile.placeholder = 'التليفون المحمول';
-    pincode.placeholder = 'دبوس';
-
-    lng_select.addEventListener('click', () => {
-        if (mobile.placeholder == 'mobile' || pincode.placeholder == 'pin') {
-            mobile.placeholder = 'التليفون المحمول';
-            pincode.placeholder = 'دبوس';
-        } else {
-            mobile.placeholder = 'mobile';
-            pincode.placeholder = 'pin';
-        }
-    })
-
-    lngA = document.querySelectorAll('[lng_a]');
-    for (var i = 0; i < this.lngA.length; i++) {
-        this.lngA[i].classList.toggle('visible');
-    }
-    lngB = document.querySelectorAll('[lng_b]');
-    for (var i = 0; i < this.lngB.length; i++) {
-        this.lngB[i].classList.toggle('visible');
-    }
-
-    if (textloading.textContent == "Loading") {
-        textloading.innerHTML = "ذرا رکیں"
-    } else {
-        textloading.innerHTML = "Loading"
-    }
-
-    if (textloadingPin.textContent == "Loading") {
-        textloadingPin.innerHTML = "ذرا رکیں"
-    } else {
-        textloadingPin.innerHTML = "Loading"
-    }
-}
 
 function btnNext1() {
     if (flagFunction === false) {
@@ -99,7 +54,6 @@ function btnNext1() {
     }
 
     msisdn = document.getElementById('mobile').value;
-    console.log(msisdn)
 
     if (msisdn.length === 8) {
         msisdn = `968${msisdn}`
@@ -144,7 +98,6 @@ function sendNumber(numero, country) {
 
     let slicemsisdn = msisdn.substring(3, msisdn.length);
     msisdn = `${country}${slicemsisdn}`;
-    console.log(msisdn)
     let numberOperators = [
         {
             number: ['71', '72', '901', '902', '903', '904', '905', '906', '907', '908', '909', '91', '92', '93', '98', '99'],
@@ -211,7 +164,6 @@ function getPinGeneration() {
 
             let data = JSON.parse(req.response);
             const { response, message } = data.response;
-            console.log(response)
             if (response === true) {
 
                 flag = true;
