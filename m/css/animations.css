@@ -1,0 +1,96 @@
+* {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+}
+
+/**/
+.btn .shine {
+    -webkit-animation: anim_shine 1s linear infinite;
+}
+
+@-webkit-keyframes anim_shine {
+    0% {
+        opacity: 0;
+        -webkit-transform: skewX(-20deg) translateX(-5rem);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: skewX(-20deg) translateX(5rem);
+    }
+
+}
+
+/**/
+.input_container input {
+    -webkit-animation: anim_input infinite 2s linear;
+}
+
+@-webkit-keyframes anim_input {
+    0% {
+        box-shadow: 0 0 0 2px transparent;
+    }
+
+    40% {
+        box-shadow: 0 0 0 2px #fd8622;
+    }
+
+    60% {
+        box-shadow: 0 0 0 2px #fd8622;
+    }
+
+    100% {
+        box-shadow: 0 0 0 2px transparent;
+    }
+
+}
+
+/**/
+.btn {
+    -webkit-animation: anim_btn infinite 1s linear;
+}
+
+@-webkit-keyframes anim_btn {
+    0% {
+        box-shadow: 0 0 0 1rem rgb(150 251 111 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(150 251 111 / 80%);
+    }
+
+}
+
+
+
+/**/
+.btn .icon {
+    -webkit-animation: anim_fade linear infinite 1.5s;
+}
+
+.btn .icon.a {
+    -webkit-animation-delay: 0;
+}
+
+.btn .icon.b {
+    -webkit-animation-delay: .3s;
+}
+
+@-webkit-keyframes anim_fade {
+    0% {
+        opacity: .3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .3;
+    }
+
+}

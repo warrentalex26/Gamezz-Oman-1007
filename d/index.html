@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Ads: 451274008 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-451274008"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'AW-451274008');
+	</script>
+	<!-- Global site tag END -->
+	<title>Gamebox</title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<link type="text/css" rel="stylesheet" href="css/styles.css">
+	<link type="text/css" rel="stylesheet" href="css/animations.css">
+	<script src="../js/detectBrowser.js"></script>
+	<script>
+		function setInputEnd(id) {
+			var el = document.getElementById(id);
+			el.selectionStart = el.selectionEnd = el.value.length;
+			el.focus();
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<!--Idioma inicio-->
+		<a href="javascript:void(0);" id="lng_select" class="lng_sel" onclick="btnLng();">
+			<i class="icon icon_lng"></i>
+			<span lng_a>العربية</span>
+			<span lng_b class="ltr">English</span>
+		</a>
+		<!--Idioma fin-->
+		<div class="form">
+			<div class="icon logo"></div>
+			<div class="title">
+				<span lng_a>Sign-up and get access to<br><span class="c-orange">Hundreds of premium games</span></span>
+				<span lng_b>المئات من الألعاب المميزة<br><span class="c-orange">مباشرة على جوالك</span></span>
+				<i class="icon icon_title"></i>
+			</div>
+			<!--Paso 01 inicio-->
+			<div id="mobile_box" class="step visible">
+				<div class="input_container">
+					<div class="label">
+						<i class="icon icon_phone"></i>
+						<span lng_a>Enter your mobile number</span>
+						<span lng_b>أدخل رقم هاتفك للتنزيل</span>
+					</div>
+					<input placeholder="Mobile" autocomplete="off" maxlength="11" id="mobile" type="tel"
+					autofocus="autofocus" onKeyPress="return validar(event)" onfocus="setInputEnd('mobile')">
+				</div>
+				<div class="btn_container">
+					<a href="javascript:void(0);" class="btn" onclick="btnNext1();">
+						<i class="icon icon_arrow_right a"></i>
+						<i class="icon icon_arrow_right b"></i>
+						<span lng_a class="text-btn11 text">Subscribe</span>
+						<span lng_b class="text-btn11 text">اشترك</span>
+						<span id="textloading" class="text-loading">Loading</span>
+						<i class="icon icon_arrow_left b"></i>
+						<i class="icon icon_arrow_left a"></i>
+						<span class="shine"></span>
+					</a>
+				</div>
+				<!-- -->
+			</div>
+			<!--Paso 01 fin-->
+			<!--Paso 02 inicio-->
+			<div id="pin_box" class="step">
+				<div class="input_container">
+					<div class="label">
+						<i class="icon icon_pin"></i>
+						<span lng_a>Enter the PIN received on your mobile</span>
+						<span lng_b>دخل الرمز الشخصي الذي تلقيته على جوالك</span>
+					</div>
+					<input autocomplete="off" maxlength="4" class="textfield" type="tel" id="pin" placeholder="PIN"
+					onKeyPress="return validar(event)">
+				</div>
+				<div class="btn_container">
+					<a href="javascript:void(0);" class="btn" onclick="btnNext2();">
+						<i class="icon icon_arrow_right a"></i>
+						<i class="icon icon_arrow_right b"></i>
+						<span lng_a class="text-btn12 text">Continue</span>
+						<span lng_b class="text-btn12 text">إستمر</span>
+						<span id="text-loading-pin" class="text-loading-pin">Loading</span>
+						<i class="icon icon_arrow_left b"></i>
+						<i class="icon icon_arrow_left a"></i>
+						<span class="shine"></span>
+					</a>
+				</div>
+			</div>
+			<!--Paso 02 fin-->
+			<!--Paso 03 inicio-->
+			<div id="resultado" class="step">
+				<div class="result_container">
+					<div class="fz-3 fw-b c-blue">
+						<span lng_a>Congratulations</span>
+						<span lng_b>تهانينا</span>
+					</div>
+					<div>
+						<span lng_a>You will receive the required content soon!</span>
+						<span lng_b>ستقوم باستلام المحتوى المطلوب قريبا!</span>
+					</div>
+				</div>
+			</div>
+			<!--Paso 03 fin-->
+		</div>
+		<!--Footer inicio-->
+		<div class="footer">
+			<div lng_a>
+				Gamezz is a subscription service that will automatically renew for 1 OMR / weekly for omantel users, .31 OMR / Week for ooredoo until you unsubscribe.
+				You can unsubscribe from the service at anytime, by sending UNSUB VZ to 92026 for Omantel and Ooredoo subscribers send UNSUB D to 92946 and for Ooredoo Send UNSUB C to 91971.
+				To make use of this service, you must be 18 or more unless you have received permission from your parents or the person who is authorized to pay your bill
+			</div>
+			<div lng_b>
+				Gamezz is a subscription service that will automatically renew for 1 OMR / weekly for omantel users, .31 OMR / Week for ooredoo until you unsubscribe.
+				You can unsubscribe from the service at anytime, by sending UNSUB VZ to 92026 for Omantel and Ooredoo subscribers send UNSUB D to 92946 and for Ooredoo Send UNSUB C to 91971.
+				To make use of this service, you must be 18 or more unless you have received permission from your parents or the person who is authorized to pay your bill
+			</div>
+		</div>
+		<!--Footer fin-->
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="../js/main.js"></script>
+</body>
+
+</html>
